@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-100
+  }
+}
+
+@layer utilities {
+  .canvas {
+    @apply absolute top-0 left-0 w-full h-full
+  }
+
+  .modal {
+    @apply bg-white p-5 rounded w-full max-w-sm shadow-md border
+  }
+  .modal-backdrop {
+    @apply fixed top-0 left-0 w-full h-full bg-black/30 grid place-items-center
+  }
+
+  .button {
+    @apply bg-orange-500 text-white rounded px-4 py-[6px] cursor-pointer transition-shadow duration-75
+    hover:bg-orange-400 active:bg-orange-500 focus:ring-4 ring-orange-500/50
+  }
+
+  .input {
+    @apply bg-neutral-200 rounded px-4 py-2 outline-none w-full transition duration-100
+  }
+  .input:focus {
+    @apply bg-transparent ring-2 ring-orange-500/50
+  }
+  .input:invalid {
+    @apply ring-4 ring-red-500/50 bg-red-100
+  }
+}
